@@ -20,3 +20,9 @@ Adversarial attack in graph domains involves the graph's structure and feature p
 | GPU | NVIDIA A100 SXM 80GB |
 
 ## Implementation
+Please use the following steps to execute Disttack.
+
+Step 1: Train surrogate model to provide gradient information
+```
+
+```
