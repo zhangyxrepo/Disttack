@@ -1,4 +1,4 @@
 # Disttack
-An open-sourced repository for Disttack
+An open-sourced repository for **Disttack**
 
-To be filled in next few days due to network issues, thank you for your patients
+This repo contains comprehensive [statistics](#statistics) of **Disttack**, the first adversarial attack framework tailored for distributed GNN training together with the official [implementation](#implementation) of Disttack </b>.
