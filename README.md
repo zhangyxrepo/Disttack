@@ -13,3 +13,10 @@ Adversarial attack in graph domains involves the graph's structure and feature p
 * `numpy 1.20.3`
 * `pytorch 1.1.4`
 
+## Platforms
+| Platform | Configuration |
+| ---------- |---------- |
+| CPU | 32-core Intel Xeon Platinum 8350C CPU (2.60GHz) |
+| GPU | NVIDIA A100 SXM 80GB |
+
+## Implementation
