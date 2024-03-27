@@ -1,4 +1,4 @@
-# Disttack
+# Disttack: Graph Adversarial Attacks Toward Distributed GNN Training 
 An open-sourced repository for **Disttack**
 
 This repo contains comprehensive [Introduction](#Introduction) of **Disttack**, the first adversarial attack framework tailored for distributed GNN training together with the official [implementation](#implementation) of Disttack </b>.
