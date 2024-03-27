@@ -20,10 +20,13 @@ Adversarial attack in graph domains involves the graph's structure and feature p
 | CPU | 32-core Intel Xeon Platinum 8350C CPU (2.60GHz) |
 | GPU | NVIDIA A100 SXM 80GB |
 
+## Datasets
+Except datasets mentioned in our work, any other datasets that can be converted to pytorch graph strcure can be easily adopted. For more detile please check README in ```dataset``` folder.
+
 ## Implementation
 Please use the following steps to execute Disttack.
-
+```
+python Disttack/code/main_disttack.py
+```
 Step 1: Train surrogate model to provide gradient information
-```
-
-```
+Step 2：
