@@ -8,9 +8,10 @@ Adversarial attack in graph domains involves the graph's structure and feature p
 
 ## Requirements
 * `Python 3.9`
-* `cuda 11.4 with driver accordingly`
+* `cuda 11.7 with driver accordingly`
 * `DGL`
-* `numpy 1.20.3`
+* `numpy 1.20.3` or higher
+* `matplotlib 3.7.2` 
 * `pytorch 1.1.4`
 
 ## Platforms
