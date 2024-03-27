@@ -21,7 +21,13 @@ Adversarial attack in graph domains involves the graph's structure and feature p
 | GPU | NVIDIA A100 SXM 80GB |
 
 ## Datasets
-Except datasets mentioned in our work, any other datasets that can be converted to pytorch graph strcure can be easily adopted. For more detile please check README in ```dataset``` folder.
+Except datasets mentioned in our work, any other datasets that can be converted to pytorch graph strcure can be easily adopted. They are available on  https://drive.google.com/drive/folders/1ycwDpOUHTeS1BRxCF9JYAV_KT73t9iHW. For more detile please check README in ```dataset``` folder.
+*Flickr
+*Arxiv
+*RedditSV
+*Reddit
+------------------------------
+*other torch.geometric datasets are supported
 
 ## Implementation
 Please use the following steps to execute Disttack.
