@@ -34,5 +34,7 @@ Please use the following steps to execute Disttack.
 ```
 python Disttack/code/main_disttack.py
 ```
-Step 1: Train surrogate model to provide gradient information
-Step 2：
+For baselines we used in our work, you can execute them use the following steps:
+```
+python Disttack/baselines/python test_dice.py #for example
+```
