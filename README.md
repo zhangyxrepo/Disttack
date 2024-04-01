@@ -8,7 +8,8 @@ This repo contains comprehensive [Introduction](#Introduction) of **Disttack**, 
 ## Introduction
 Adversarial attack in graph domains involves the graph's structure and feature perturbations. Communication complexity among multiple computing nodes amplifies security challenges in distributed scenarios. This is the first work thar bridges adversarial attack and distributed GNN training, filling the blank in the related realm.
 
-![image](overview.png)
+
+<img src="overview.png" alt="image_alt_text" width="100%"/>
 
 ## Requirements
 * `Python 3.9`
