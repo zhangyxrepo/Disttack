@@ -276,10 +276,10 @@ def main():
     targets_idx = train_nodes[:22735]
     #######################pertube structures#######################
     
-    '''
+    surrogate = SAGE(graph, graph, args.model, dataset.num_features, args.hidden, dataset.num_classes)
     #modified_adj = sp.load_npz(f'./Disttack/adv_adj/{args.dataset}_{device}_adv_adj_4.npz')
     modified_adj = adj
-    modified_features = sp.csr_matrix(graph.x.cpu().numpy()) #临时地初始化一下modified——features
+    modified_features = sp.csr_matrix(graph.x.cpu().numpy()) 
     #modified_features = sp.csr_matrix(np.load(f'./Disttack/adv_adj/{args.dataset}_{device}_adv_fea.npz.npy'))
     save_adj = None
     os.makedirs('./Disttack/adv_adj/', exist_ok=True)
@@ -287,7 +287,7 @@ def main():
     model = model.to(device)
     print(f'Now running on device {device}')
     features = modified_features
-    for target_node in tqdm(targets_idx, desc=f"Attacking with sur_test acc {test_acc:.3f}"):
+    for target_node in tqdm(targets_idx, desc="Perturbing structures"):
         n_perturbations = int(degrees[target_node])
         model.attack(features, labels, target_node, n_perturbations, n_influencers=None)
         modified_adj = model.modified_adj
@@ -299,9 +299,8 @@ def main():
     save_fea = modified_features.detach().cpu().numpy()  # 如果 modified_features 是 tensor
     #sp.save_npz(f'./Disttack/adv_adj/{args.dataset}_cuda:0_adv_adj_full.npz', save_adj)
     np.save(f'./Disttack/adv_adj/{args.dataset}_cuda:0_adv_fea_full', save_fea)
-    
-    exit()
-    '''
+
+
     
     '''
     #######################pertube structures ends#######################
@@ -313,7 +312,7 @@ def main():
     #data.edge_index = torch.tensor(modified_adj.nonzero(), dtype=torch.long)
     data.edge_index = torch.tensor(adj.nonzero(), dtype=torch.long)
     data.x = torch.tensor(modified_fea, dtype=torch.float)
-    '''
+
     modified_graph_1 = subgraph[0]
     modified_adj_1 = sp.load_npz(f'./Disttack/adv_adj/{args.dataset}_cuda:0_adv_adj_16.npz')
     modified_features_1 = np.load(f'./Disttack/adv_adj/{args.dataset}_cuda:0_adv_fea_16.npz.npy')
@@ -335,12 +334,11 @@ def main():
     modified_features_4 = np.load(f'./Disttack/adv_adj/{args.dataset}_cuda:3_adv_fea_4.npz.npy')
     modified_graph_4.edge_index = torch.tensor(modified_adj_4.nonzero(), dtype=torch.long)
     modified_graph_4.x = torch.tensor(modified_features_4, dtype=torch.float)
-    '''
+
     print('Its done')
-    #'''
-    ##############将扰动后adj fea分配出去的代码 不用就注释掉###############
-    '''
-    #单节点测试代码 不用就启用上下三红点注释掉:
+
+
+    #single-computing device test code, dont use it unless neccessary
     test_model = SAGE(modified_graph_2.to(rank), graph.to(rank), args.model, dataset.num_features, args.hidden, dataset.num_classes).to(rank)
     #print(test_model)
     test_model.train_with_early_stopping(train_iters=200, initialize=True, verbose=False, patience=500) # pre train with early-stopping
@@ -356,8 +354,7 @@ def main():
     surrogate = SAGE(graph.to(rank), graph.to(rank), args.model, dataset.num_features, args.hidden, dataset.num_classes).to(rank)
     surrogate.train_with_early_stopping(train_iters=200, initialize=True, verbose=False, patience=500)
     surrogate.test()
-    exit()
-    '''
+
     
     pause = 1
 
