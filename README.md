@@ -43,3 +43,9 @@ For baselines we used in our work, you can execute them use the following steps:
 ```
 python Disttack/baselines/python test_dice.py #for example
 ```
+
+## TODO-List
+As a framework for adversarial toward distributed GNN training, Disttack is still very preliminary and incomplete. Next improvement directions include:
+* `1. Introducing a defense/attack detection mechanism - We believe this will help distributed GNN training to defend against most gradient-based attacks, which is also the current mainstream attack method.`
+* `2. Add experimental analysis for the general distributed GNN training framework: In this version of the work, we only considered the mainstream method of Mini-batch training, and did not consider the impact of Distack on the general training framework, resulting in insufficient work.`
+* `3. Expand to heterogeneous graphs: Heterogeneous graphs are more relevant to real-life applications than isomorphic graphs, and have greater challenges and opportunities.`
