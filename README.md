@@ -32,7 +32,7 @@ Except datasets mentioned in our work, any other datasets that can be converted 
 * `RedditSV`
 * `Reddit`
 ------------------------------
-* `other torch.geometric datasets are supported`
+other torch.geometric datasets are supported as well.
 
 ## Implementation
 Please use the following steps to execute Disttack.
